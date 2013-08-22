@@ -16,6 +16,7 @@ BuildRequires:	rpmbuild(macros) >= 1.553
 Requires:	php(json)
 Requires:	php(spl)
 Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,8 +28,8 @@ Zencoder integration library for PHP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_data_dir}
-cp -a Services $RPM_BUILD_ROOT%{php_data_dir}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+cp -a Services $RPM_BUILD_ROOT%{php_pear_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -36,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md LICENSE
-%{php_data_dir}/Services/Zencoder.php
-%dir %{php_data_dir}/Services/Zencoder
-%{php_data_dir}/Services/Zencoder/*.php
-%{php_data_dir}/Services/Zencoder/zencoder_ca_chain.crt
+%{php_pear_dir}/Services/Zencoder.php
+%dir %{php_pear_dir}/Services/Zencoder
+%{php_pear_dir}/Services/Zencoder/*.php
+%{php_pear_dir}/Services/Zencoder/zencoder_ca_chain.crt

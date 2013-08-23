@@ -13,6 +13,7 @@ URL:		https://github.com/zencoder/zencoder-php
 BuildRequires:	/usr/bin/php
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
+Requires:	php(curl)
 Requires:	php(json)
 Requires:	php(spl)
 Requires:	php-common >= 4:%{php_min_version}

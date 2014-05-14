@@ -4,7 +4,7 @@
 Summary:	Zencoder API PHP Library
 Name:		php-%{pkgname}
 Version:	2.1.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	https://github.com/zencoder/zencoder-php/archive/v%{version}.tar.gz
@@ -13,10 +13,10 @@ URL:		https://github.com/zencoder/zencoder-php
 BuildRequires:	/usr/bin/php
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
+Requires:	php(core) >= %{php_min_version}
 Requires:	php(curl)
 Requires:	php(json)
 Requires:	php(spl)
-Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

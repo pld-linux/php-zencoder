@@ -1,6 +1,5 @@
 %define		pkgname	zencoder
 %define		php_min_version 5.2.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Zencoder API PHP Library
 Name:		php-%{pkgname}
 Version:	2.2.0
